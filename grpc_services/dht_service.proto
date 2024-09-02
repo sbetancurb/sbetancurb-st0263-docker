@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package dht;
+
+service DHTService {
+  rpc Lookup (LookupRequest) returns (LookupResponse);
+}
+
+message LookupRequest {
+  string key = 1;
+}
+
+message LookupResponse {
+  string responsible_node = 1;
+}
